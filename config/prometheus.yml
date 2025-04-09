@@ -1,0 +1,15 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'vpn-nodes'
+    static_configs:
+      - targets:
+          - '192.168.1.101:5000'
+          - '192.168.1.102:5000'
+          - '192.168.1.103:5000'
+
+  - job_name: 'central-server'
+    static_configs:
+      - targets:
+          - 'localhost:3001'

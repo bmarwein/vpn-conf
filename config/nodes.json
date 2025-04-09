@@ -1,0 +1,44 @@
+[
+  {
+    "id": "rpi-node-1",
+    "ip": "192.168.1.101",
+    "status": "active",
+    "vpn": {
+      "provider": "NordVPN",
+      "country": "Spain"
+    },
+    "location": {
+      "lat": 40.4168,
+      "lng": -3.7038
+    },
+    "mode": "local"
+  },
+  {
+    "id": "rpi-node-2",
+    "ip": "192.168.1.102",
+    "status": "active",
+    "vpn": {
+      "provider": "ProtonVPN",
+      "country": "Germany"
+    },
+    "location": {
+      "lat": 52.52,
+      "lng": 13.405
+    },
+    "mode": "central"
+  },
+  {
+    "id": "rpi-node-3",
+    "ip": "192.168.1.103",
+    "status": "active",
+    "vpn": {
+      "provider": "ExpressVPN",
+      "country": "France"
+    },
+    "location": {
+      "lat": 48.8566,
+      "lng": 2.3522
+    },
+    "mode": "local"
+  }
+]

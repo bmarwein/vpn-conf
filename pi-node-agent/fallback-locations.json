@@ -1,0 +1,17 @@
+{
+  "rpi-node-1": {
+    "lat": 40.4168,
+    "lng": -3.7038,
+    "country": "Spain"
+  },
+  "rpi-node-2": {
+    "lat": 52.5200,
+    "lng": 13.4050,
+    "country": "Germany"
+  },
+  "rpi-node-3": {
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "country": "France"
+  }
+}

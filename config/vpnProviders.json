@@ -1,0 +1,33 @@
+{
+  "NordVPN": [
+    "Spain",
+    "France",
+    "Germany",
+    "Sweden",
+    "Netherlands"
+  ],
+  "ProtonVPN": [
+    "Germany",
+    "Switzerland",
+    "France",
+    "United Kingdom"
+  ],
+  "HMA": [
+    "France",
+    "Italy",
+    "Belgium",
+    "Germany"
+  ],
+  "GhostVPN": [
+    "Romania",
+    "Austria",
+    "Netherlands"
+  ],
+  "ExpressVPN": [
+    "United States",
+    "France",
+    "Germany",
+    "Spain",
+    "Poland"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "email": {
+    "enabled": true,
+    "recipient": "admin@domain.com"
+  },
+  "telegram": {
+    "enabled": true,
+    "chatId": "123456789"
+  },
+  "whatsapp": {
+    "enabled": false,
+    "phoneNumber": "+1234567890"
+  },
+  "thresholds": {
+    "nodeOffline": true,
+    "vpnFailure": true,
+    "restartFailure": true,
+    "countryChangeFailure": true
+  }
+}

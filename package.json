@@ -1,0 +1,24 @@
+{
+  "name": "vpn-conf",
+  "version": "1.0.0",
+  "description": "Infrastructure VPN en cascade avec Raspberry Pi",
+  "author": "bmarwein",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start:backend": "node backend/index.js",
+    "start:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "agent": "cd pi-node-agent && node statusServer.js",
+    "audit": "bash scripts/audit-securite.sh",
+    "switch": "node scripts/dashboard-controlled-switch.js",
+    "privacy:on": "bash scripts/toggle_privacy_mode.sh",
+    "privacy:off": "bash scripts/toggle_privacy_mode.sh",
+    "report": "node backend/services/reportGenerator.js"
+  },
+  "workspaces": [
+    "backend",
+    "frontend",
+    "pi-node-agent"
+  ]
+}
