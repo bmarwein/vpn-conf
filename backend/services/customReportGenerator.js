@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-const alerts = require('../../logs/alerts.json');
-const nodesData = require('../../config/nodes.json');
+const alerts = require('../logs/alerts.json');
+const nodesData = require('../config/nodes.json');
 
 function filterAlerts(start, end) {
   return alerts.filter(a => {
@@ -9,6 +9,12 @@ function filterAlerts(start, end) {
     return ts >= start && ts <= end;
   });
 }
+
+const logsPath = path.join(__dirname, '..', 'logs');
+
+if (!fs.existsSync(logsPath)) fs.mkdirSync(logsPath);
+if (!fs.existsSync(path.join(logsPath, 'alerts.json'))) fs.writeFileSync(path.join(logsPath, 'alerts.json'), '[]');
+if (!fs.existsSync(path.join(logsPath, 'nodes.json'))) fs.writeFileSync(path.join(logsPath, 'nodes.json'), '[]');
 
 function generateHTML(title, stats, alertList, filename, outputPath) {
   const html = `

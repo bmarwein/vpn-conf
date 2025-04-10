@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const logFilePath = path.join(__dirname, '../logs/system.log');
+const logFilePath = path.join(__dirname, './logs/system.log');
 
 function log(message) {
   const timestamp = new Date().toISOString();

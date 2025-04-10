@@ -1,12 +1,10 @@
-version: '3'
+version: "3"
 services:
   backend:
     build:
       context: ./backend
     ports:
       - "3001:3001"
-    volumes:
-      - ./backend:/app
     restart: always
 
   frontend:
@@ -14,6 +12,4 @@ services:
       context: ./frontend
     ports:
       - "3000:3000"
-    volumes:
-      - ./frontend:/app
     restart: always
