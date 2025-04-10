@@ -1,0 +1,39 @@
+# Node.js
+node_modules/
+npm-debug.log*
+.env
+
+# Logs
+logs/
+*.log
+
+# Backups & reports
+backup/
+report-sample/
+report/weekly/
+report/monthly/
+
+# PM2
+.pids/
+*.pid
+
+# Frontend build
+frontend/dist/
+frontend/.vite/
+frontend/node_modules/
+
+# Backend Modules
+backend/node_modules/
+# Certificats & OpenVPN
+openvpn-ca/
+*.ovpn
+*.key
+*.crt
+
+# System
+.DS_Store
+Thumbs.db
+
+# OS Temp
+*.swp
+*.swo
