@@ -1,20 +1,20 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 
-import Dashboard from './pages/Dashboard';
-import Nodes from './pages/Nodes';
-import Alerts from './pages/Alerts';
-import Reports from './pages/Reports';
-import Settings from './pages/Settings';
-import Navbar from './components/Navbar';
+const Dashboard = lazy(() => import('./pages/Dashboard'));
+const Nodes = lazy(() => import('./pages/Nodes'));
+const Alerts = lazy(() => import('./pages/Alerts'));
+const Reports = lazy(() => import('./pages/Reports'));
+const Settings = lazy(() => import('./pages/Settings'));
 
-// Layout avec Navbar visible sur toutes les pages
 function Layout() {
   return (
     <div>
       <Navbar />
       <main className="p-4">
-        <Outlet />
+        <Suspense fallback={<p>Chargement...</p>}>
+          <Outlet />
+        </Suspense>
       </main>
     </div>
   );
