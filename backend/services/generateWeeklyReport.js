@@ -1,8 +1,15 @@
+// backend/services/generateWeeklyReport.js
 const fs = require('fs');
 const path = require('path');
 
 const nodesData = require('../../config/nodes.json');
-const alerts = require('../../logs/alerts.json'); // fichier généré automatiquement si log des alertes
+let alerts = [];
+try {
+  alerts = require('../../logs/alerts.json');
+} catch (e) {
+  alerts = [];
+}
+
 const outputPath = path.join(__dirname, '../../report/weekly');
 
 function generateReportHTML(data, alertList) {
@@ -60,8 +67,8 @@ function generateReportHTML(data, alertList) {
 
   fs.mkdirSync(outputPath, { recursive: true });
   fs.writeFileSync(path.join(outputPath, filename), html);
-  console.log(`[RAPPORT] Rapport HTML généré : ${filename}`);
+  console.log(`[RAPPORT] Rapport HTML hebdo généré : ${filename}`);
 }
 
 // Exécution
-generateReportHTML(nodesData, alerts || []);
+generateReportHTML(nodesData, alerts);

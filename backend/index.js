@@ -27,3 +27,9 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`API backend en service sur le port ${port}`);
 });
+
+// Middleware global pour erreurs
+app.use((err, req, res, next) => {
+  console.error("[ERREUR SERVEUR]", err.stack);
+  res.status(500).json({ error: "Erreur interne du serveur." });
+});

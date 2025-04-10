@@ -3,7 +3,12 @@ const express = require('express');
 const router = express.Router();
 const vpnManager = require('../services/vpnManager');
 
-// Retourne les pays disponibles pour un fournisseur donné
-router.get('/:provider/countries', vpnManager.getAvailableCountries);
+router.get('/:provider/countries', async (req, res, next) => {
+  try {
+    await vpnManager.getAvailableCountries(req, res);
+  } catch (err) {
+    next(err);
+  }
+});
 
 module.exports = router;

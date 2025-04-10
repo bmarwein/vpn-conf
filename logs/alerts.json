@@ -1,0 +1,22 @@
+[
+  {
+    "timestamp": "2025-04-03T09:12:33Z",
+    "type": "info",
+    "message": "Redémarrage du node rpi-node-2"
+  },
+  {
+    "timestamp": "2025-04-04T04:23:18Z",
+    "type": "error",
+    "message": "VPN connection failure on rpi-node-1 (ProtonVPN)"
+  },
+  {
+    "timestamp": "2025-04-05T11:00:00Z",
+    "type": "info",
+    "message": "Changement automatique de pays vers France"
+  },
+  {
+    "timestamp": "2025-04-07T21:55:05Z",
+    "type": "error",
+    "message": "SSH unauthorized attempt (banned)"
+  }
+]
