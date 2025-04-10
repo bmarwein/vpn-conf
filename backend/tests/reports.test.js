@@ -3,6 +3,14 @@ const app = require('../server');
 const fs = require('fs');
 const path = require('path');
 
+beforeAll(() => {
+  const filePath = path.join(__dirname, '../config/nodes.json');
+  if (!fs.existsSync(filePath)) {
+    fs.mkdirSync(path.dirname(filePath), { recursive: true });
+    fs.writeFileSync(filePath, '[]');
+  }
+});
+
 describe('API Reports', () => {
   it('POST /api/reports/generate (weekly) should return a filename', async () => {
     const res = await request(app)
